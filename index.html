@@ -1,15 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>DOM Practice</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Responsive Navigation Bar</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+/* FLEXBOX */
+.nav-container{
+    display:flex;
+    background:#333333;
+    padding: 10px;
+}
+
+/* NAV ITEMS */
+.nav-item{
+    color:green;
+    padding:14px 20px;
+    text-decoration:none;
+    flex:1;
+    text-align:center;
+}
+
+.nav-item:hover{
+    background:#dddddd;
+    color:green;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width:600px){
+
+.nav-container{
+    flex-direction:column;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <h1 id="title">Hello Student 👋</h1>
+<div class="nav-container">
 
-    <button onclick="changeText()">Click Me</button>
+<a href="#" class="nav-item">Home</a>
 
-    <script src="script.js"></script>
+<a href="#" class="nav-item">About</a>
+
+<a href="#" class="nav-item">Services</a>
+
+<a href="#" class="nav-item">Contact</a>
+
+</div>
+
 </body>
 </html>
